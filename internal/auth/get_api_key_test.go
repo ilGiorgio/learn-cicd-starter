@@ -13,6 +13,8 @@ func TestGetAPIKey(t *testing.T) {
 	headers.Add("Authorization", "ApiKey ey10dkdktoken")
 	headers.Add("Content-Type", "application/json")
 
+	fmt.Println("Headers: ", headers)
+
 	exp := "ey10dkdktoke"
 	got, err := GetAPIKey(headers)
 	if err != nil {
