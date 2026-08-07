@@ -15,7 +15,7 @@ func TestGetAPIKey(t *testing.T) {
 
 	fmt.Println("Headers: ", headers)
 
-	exp := "ey10dkdktoke"
+	exp := "ey10dkdktoken"
 	got, err := GetAPIKey(headers)
 	if err != nil {
 		fmt.Println("Error: ", err)
