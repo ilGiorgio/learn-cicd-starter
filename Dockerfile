@@ -1,6 +1,6 @@
-FROM --platform=linux/amd64 debian:stable-slim
+FROM debian:bookworm-slim
 
-RUN apt-get update && apt-get install
+RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
 ADD notely /usr/bin/notely
 
